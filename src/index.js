@@ -1,8 +1,16 @@
 const fs = require("fs/promises");
 const fileName = "myfile.txt";
 const reader = async (fileName) => {
-  // write code here
-	// dont change function name
+
+function reader(fileName) {
+  fs.readFile(fileName, 'utf8', (err, content) => {
+    if (err) throw err;
+    console.log(content);
+  });
+}
+
+reader('myfile.txt');
+
   
 };
 
